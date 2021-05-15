@@ -1,0 +1,27 @@
+{
+  "name": "shootergame",
+  "version": "1.0.0",
+  "description": "shooter game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saimaAnis21/Shooter-Game.git"
+  },
+  "author": "Saima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saimaAnis21/Shooter-Game/issues"
+  },
+  "homepage": "https://github.com/saimaAnis21/Shooter-Game#readme",
+  "devDependencies": {
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
