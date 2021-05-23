@@ -1,4 +1,3 @@
-import Phaser from 'phaser';
 import form from '../Objects/UserNameForm';
 
 const scene = {

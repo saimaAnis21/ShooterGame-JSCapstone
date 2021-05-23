@@ -1,5 +1,5 @@
 const path = require('path');
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -30,16 +30,16 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
-      }      
+          loader: 'babel-loader',
+        },
+      },
     ],
   },
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: './src/assets', to : 'assets' }
-      ]
-    })
-  ]
+        { from: './src/assets', to: 'assets' },
+      ],
+    }),
+  ],
 };

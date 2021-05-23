@@ -28,5 +28,4 @@ describe('GameScene', () => {
   test('Player is a subclass of sprite', () => {
     expect(GameScene instanceof Phaser.Physics.Arcade.Sprite).toBe(false);
   });
-
 });
