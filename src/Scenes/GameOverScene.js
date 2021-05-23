@@ -1,7 +1,7 @@
 import 'phaser';
 
  
-export default class BootScene extends Phaser.Scene {
+export default class GameOverScene extends Phaser.Scene {
   constructor () {
     super('GameOver');
   }
@@ -11,7 +11,7 @@ export default class BootScene extends Phaser.Scene {
   }
  
   create () {
-    //this.scene.start('Preloader');
+    
       this.title = this.add.text(this.game.config.width * 0.5, 128, "GAME OVER", {
         fontFamily: 'monospace',
         fontSize: 48,
@@ -30,8 +30,7 @@ export default class BootScene extends Phaser.Scene {
       this.btnRestart.setInteractive();
   
       this.btnRestart.on("pointerover", function() {
-        this.btnRestart.setTexture("sprBtnRestartHover"); // set the button texture to sprBtnPlayHover
-        //this.sfx.btnOver.play(); // play the button over sound
+        this.btnRestart.setTexture("sprBtnRestartHover");
       }, this);
   
       this.btnRestart.on("pointerout", function() {
@@ -40,7 +39,7 @@ export default class BootScene extends Phaser.Scene {
   
       this.btnRestart.on("pointerdown", function() {
         this.btnRestart.setTexture("sprBtnRestartDown");
-        //this.sfx.btnDown.play();
+        
       }, this);
   
       this.btnRestart.on("pointerup", function() {

@@ -1,5 +1,3 @@
-import '../assets/styles.css';
-
 const form = (() => {
     const submitForm = (scene) => {
       const input = document.querySelector('#name');

@@ -1,5 +1,4 @@
 import 'phaser';
-import logoImg from '../assets/logo.png';
 import { Player, GunShip} from './Entities';
 import form from '../Objects/UserNameForm';
 import leaderboard from '../LeaderBoard';
@@ -10,8 +9,7 @@ export default class GameScene extends Phaser.Scene {
   }
  
   preload () {
-    // load images
-    this.load.image('logo',logoImg);
+   
   }
  
   create () {
