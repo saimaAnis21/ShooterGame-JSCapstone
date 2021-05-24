@@ -1,3 +1,4 @@
+/* eslint max-classes-per-file: ["error", 4] */
 import Phaser from 'phaser';
 
 class Entity extends Phaser.GameObjects.Sprite {
