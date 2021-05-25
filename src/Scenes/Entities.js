@@ -28,7 +28,7 @@ class Entity extends Phaser.GameObjects.Sprite {
       this.body.setVelocity(0, 0);
 
       this.on('animationcomplete', function () {
-        this.destroy();        
+        this.destroy();
       }, this);
 
       this.setData('isDead', true);

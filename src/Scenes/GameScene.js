@@ -10,7 +10,7 @@ export default class GameScene extends Phaser.Scene {
 
   create() {
     form.removeForm(this);
-    
+
     // Player name
     const user = this.sys.game.globals.username;
 
@@ -78,9 +78,9 @@ export default class GameScene extends Phaser.Scene {
       if (!player.getData('isDead') && !enemy.getData('isDead')) {
         const playerName = user;
         const finalScore = score;
-        if(finalScore!==0){
+        if (finalScore !== 0) {
           leaderboard.sendData(playerName, finalScore);
-        }        
+        }
         player.explode(false);
         enemy.explode(true);
         player.onDestroy();
