@@ -36,11 +36,10 @@ const leaderboard = (() => {
   const displayScore = async (scene) => {
     const scores = await receiveData();
     const scoreList = scores.result;
-    // console.log(scoreList);
     scoreList.sort(compare);
     const size = scoreList.length > 18 ? 18 : scoreList.length;
     for (let i = 0; i < size; i += 1) {
-      scene.add.text(640, 24 * i + 45, `${scoreList[i].user} : ${scoreList[i].score}`, { fontSize: 20 }).setOrigin(0.5);
+      scene.add.text(400, 24 * i + 80, `${scoreList[i].user} : ${scoreList[i].score}`, { fontSize: 20 }).setOrigin(0.5);
     }
   };
 

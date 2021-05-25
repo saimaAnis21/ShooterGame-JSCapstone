@@ -10,11 +10,10 @@ export default class GameScene extends Phaser.Scene {
 
   create() {
     form.removeForm(this);
-    // console.log(this.sys.game.globals.username);
+    
     // Player name
     const user = this.sys.game.globals.username;
 
-    // console.log(user);
     this.anims.create({
       key: 'sprEnemy0',
       frames: this.anims.generateFrameNumbers('sprEnemy0'),
@@ -28,13 +27,6 @@ export default class GameScene extends Phaser.Scene {
       frameRate: 20,
       repeat: 0,
     });
-
-    // this.anims.create({
-    //   key: "sprPlayer",
-    //   frames: this.anims.generateFrameNumbers("sprPlayer"),
-    //   frameRate: 20,
-    //   repeat: -1
-    // });
 
     this.player = new Player(
       this,
@@ -65,7 +57,6 @@ export default class GameScene extends Phaser.Scene {
       loop: true,
     });
 
-
     const scoreText = this.add.text(this.game.config.width - 250, this.game.config.height - 30, `${user}'s SCORE:0`, {
       fontFamily: 'monospace',
       fontSize: 40,
@@ -87,8 +78,9 @@ export default class GameScene extends Phaser.Scene {
       if (!player.getData('isDead') && !enemy.getData('isDead')) {
         const playerName = user;
         const finalScore = score;
-        // console.log(finalScore);
-        leaderboard.sendData(playerName, finalScore);
+        if(finalScore!==0){
+          leaderboard.sendData(playerName, finalScore);
+        }        
         player.explode(false);
         enemy.explode(true);
         player.onDestroy();

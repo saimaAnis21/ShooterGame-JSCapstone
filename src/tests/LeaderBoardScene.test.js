@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import leaderboard from '../LeaderBoard';
 import LeaderboardScene from '../Scenes/LeaderBoardScene';
-// import 'regenerator-runtime/runtime';
+
 
 global.fetch = jest.fn(() => Promise.resolve({
   json: () => Promise.resolve({
@@ -46,6 +46,10 @@ describe('Leaderboard', () => {
     leaderboard.sendData('runner', 1000).then((score) => expect(score.result).toBe('Leaderboard score created correctly.'));
   });
 
+  test('while saveing the score and playerName to the leaderBoard respnse is not null', () => {
+    leaderboard.sendData('runner', 1000).then((score) => expect(score.result).not.toBe(null));
+  });
+
   test('Receives/Loads the scores', async () => {
     const scores = await leaderboard.receiveData();
     expect(scores.result).toBeTruthy();
@@ -53,6 +57,10 @@ describe('Leaderboard', () => {
 
   test('get score and playerName from the leaderBoard', () => {
     leaderboard.receiveData().then((scores) => expect(typeof scores).toEqual('object'));
+  });
+
+  test('result is not null', () => {
+    leaderboard.receiveData().then((scores) => expect(scores).not.toBe(null));
   });
 
   test('Ranking contains the Player', () => {

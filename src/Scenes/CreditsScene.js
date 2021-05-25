@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import config from '../Config/config';
+import form from '../Objects/UserNameForm';
 
 export default class CreditsScene extends Phaser.Scene {
   constructor() {
@@ -7,6 +8,7 @@ export default class CreditsScene extends Phaser.Scene {
   }
 
   create() {
+    form.removeForm(this);
     this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#fff' });
     this.madeByText = this.add.text(0, 0, 'Created By: Microverse-Saima Anis', { fontSize: '26px', fill: '#fff' });
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
@@ -29,7 +31,7 @@ export default class CreditsScene extends Phaser.Scene {
       duration: 3000,
       delay: 1000,
       onComplete() {
-        this.destroy();
+        this.destroy;
       },
     });
 
@@ -40,7 +42,7 @@ export default class CreditsScene extends Phaser.Scene {
       duration: 8000,
       delay: 1000,
       onComplete: function () {
-        this.madeByTween.destroy();
+        this.madeByTween.destroy;
         this.scene.start('Title');
       }.bind(this),
     });

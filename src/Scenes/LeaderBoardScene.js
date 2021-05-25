@@ -12,13 +12,13 @@ export default class LeaderboardScene extends Phaser.Scene {
   create() {
     form.removeForm(this);
     leaderboard.displayScore(this);
-    this.add.text(640, 20, 'Scoreboard', {
+    this.add.text(400, 50, 'Scoreboard', {
       fontSize: 40,
       color: '#FFF',
       fontStyle: 'bold',
       padding: 10,
     }).setOrigin(0.5);
 
-    this.menuButton = new Button(this, 640, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
+    this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
   }
 }
