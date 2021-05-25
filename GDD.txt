@@ -1,0 +1,24 @@
+   +++++++++++++++++++++
+                                                                 +  The Space Shooter  +
+                                                                 +++++++++++++++++++++
+
+This is a game where you play the role of a space craft and shoot as many enemyships as possible without colliding into an enemyship enemyship.
+
+++++ Movement ++++
+=> The player can move the space craft up, down, let or right using the up, down, left, right arrow keys.
+=> The enemyships appear at random positions throughout the game.
+
+++++ Scores ++++
+=> A player collects points as he/she shoots the enemyships. 
+=> Each shot is worth 5 points, so in order to win shoot as many enemyships as possible.
+
+++++ Game Over ++++
+=> The game ends when the player's spaceship collides into an enemyship. 
+=> The score is saved and can be viewed in the scoreboard. 
+=> The player is prompted to retry to play the game again.
+
+++++ Future additions ++++
+In the future, I will try to enhance the game by
+=> Increasing the speed of the spaceship.
+=> Adding more variety of  enemyships.
+=> Granting more than one life to the player in the game.

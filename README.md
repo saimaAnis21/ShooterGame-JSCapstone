@@ -8,17 +8,17 @@ A Game in which the player shoots enemies and gains points. If the player crashe
 
 ## Game Design and Instructions
 
-- Play as a space craft shooting oncoming enemy scpaeships.
-- Gain 5 points for every enemyship shot.
-- The only way to survive is to avoid crashing into any of the oncoming enemy scpaeships.
+- Play as a spacecraft shooting oncoming enemy spaceships.
+- Gain 5 points for every enemy ship shot.
+- The only way to survive is to avoid crashing into any of the oncoming enemy spaceships.
 
 ## Game Controls
-To control the space craft, use the up/down/letf/right arrow keys on the keyboard.
+To control the spacecraft, use the up/down/left/right arrow keys on the keyboard.
 
-- Press up arrow key to move the craft upwards.
-- Press down arrow to move the craft downwards.
-- Press left arrow to move the craft left.
-- Press right arrow to move the craft right.
+- Press the up arrow key to move the craft upwards.
+- Press the down arrow key to move the craft downwards.
+- Press the left arrow key to move the craft left.
+- Press the right arrow key to move the craft right.
 
 ## Built With
 
@@ -32,17 +32,41 @@ To control the space craft, use the up/down/letf/right arrow keys on the keyboar
 
 To get a local copy up and running follow these simple example steps.
 
-- Clone this project by typing ```git clone git@github.com:saimaAnis21/to-do-list.git```
-- cd into to-do-list
+- Clone this project by typing ```git clone git@github.com:saimaAnis21/ShooterGame-JSCapstone.git```
+- cd into ShooterGame-JSCapstone
 - Run git pull origin main
 If you want to repack the file
-- Run npm install on the terminal to install dependancies
+- Run npm install on the terminal to install dependencies
 - Run npm run build to pack the files in the src folder
-- Go to the dist folder and open index.html
-- Run npm run start to open it on a live server
+- Run ```npm run start``` to open it on a live server
 Else
 - Just Go to the dist folder and open index.html
 
+To run the test
+
+- Run ```npm test``` to run the tests.
+
+#  The Space Shooter - Game Design
+This is a game where you play the role of a spacecraft and shoot as many enemy ships as possible without colliding into an enemy ship.
+
+## Movement 
+- The player can move the spacecraft up, down, left, or right using the up, down, left, right arrow keys.
+- The enemy ships appear at random positions throughout the game.
+
+## Scores 
+- A player collects points as he/she shoots the enemyships. 
+- Each shot is worth 5 points, so to win shoot as many enemy ships as possible.
+
+## Game Over 
+- The game ends when the player's spacecraft collides into an enemy ship. 
+- The score is saved and can be viewed on the scoreboard. 
+- The player is prompted to retry to play the game again.
+
+## Future additions 
+In the future, I will try to enhance the game by
+- Increasing the speed of the spaceship.
+- Adding more variety of enemy ships.
+- Granting more than one life to the player in the game.
 
 ## Author
 
